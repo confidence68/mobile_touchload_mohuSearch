@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>移动端列表开发功能大全 by confidence68</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">移动端列表开发功能大全</h1>
+      <h2 class="project-tagline">移动端列表开发功能大全这个案例主要总结了移动端开发一些经常用到的效果，例如，下拉分页，模糊搜索，搜索历史记录，已经导航菜单切换等功能。并运用了requirejs对代码进行压缩合并。案例中common.js 是不用require的情况下，封装的一个模糊搜索和下拉分页的函数。</h2>
+      <a href="https://github.com/confidence68/mobile_touchload_mohuSearch" class="btn">View on GitHub</a>
+      <a href="https://github.com/confidence68/mobile_touchload_mohuSearch/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/confidence68/mobile_touchload_mohuSearch/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h2>
+<a id="移动端列表开发功能大全" class="anchor" href="#%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%88%97%E8%A1%A8%E5%BC%80%E5%8F%91%E5%8A%9F%E8%83%BD%E5%A4%A7%E5%85%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>移动端列表开发功能大全</h2>
+
+<p>这个案例主要总结了移动端开发一些经常用到的效果，例如，下拉分页，模糊搜索，搜索历史记录，已经导航菜单切换等功能。并运用了requirejs对代码进行压缩合并。案例中common.js
+是不用require的情况下，封装的一个模糊搜索和下拉分页的函数。</p>
+
+<h2>
+<a id="搜索历史记录图片如下" class="anchor" href="#%E6%90%9C%E7%B4%A2%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E5%9B%BE%E7%89%87%E5%A6%82%E4%B8%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>搜索历史记录图片如下</h2>
+
+<p>搜索历史运用了localStorage进行数据的临时存储，关于localStorage的一些用法，我之前的一篇文章中也写过！
+具体如下：<a href="http://www.haorooms.com/post/html5_localstorage">html5之Localstorage本地存储</a></p>
+
+<p><img src="https://raw.githubusercontent.com/confidence68/mobile_touchload_mohuSearch/master/images/history.jpg" alt="搜索历史记录"></p>
+
+<h2>
+<a id="模糊搜索案例如下" class="anchor" href="#%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2%E6%A1%88%E4%BE%8B%E5%A6%82%E4%B8%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>模糊搜索案例如下：</h2>
+
+<p>搜索中，我运用了正则进行替换，关于正则表达式的一些用法，我博客中之前写过很多，大家可以看<a href="http://www.haorooms.com/search?keyword=%E6%AD%A3%E5%88%99">这个地址</a></p>
+
+<p><img src="https://raw.githubusercontent.com/confidence68/mobile_touchload_mohuSearch/master/images/mohusearch.jpg" alt="模糊搜索"></p>
+
+<h2>
+<a id="菜单切换的案例如下" class="anchor" href="#%E8%8F%9C%E5%8D%95%E5%88%87%E6%8D%A2%E7%9A%84%E6%A1%88%E4%BE%8B%E5%A6%82%E4%B8%8B" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>菜单切换的案例如下：</h2>
+
+<p>在制作菜单切换中，我之前有文章也介绍过，感兴趣的可以看一下<a href="http://www.haorooms.com/post/webapp_bodyslidebcdiv">手机网站表层div滑动，导致底层body滑动（touchmove的阻止）</a></p>
+
+<p><img src="https://raw.githubusercontent.com/confidence68/mobile_touchload_mohuSearch/master/images/menu.jpg" alt="菜单切换"></p>
+
+<h2>
+<a id="commonjs封装函数用法" class="anchor" href="#commonjs%E5%B0%81%E8%A3%85%E5%87%BD%E6%95%B0%E7%94%A8%E6%B3%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>commonjs封装函数用法</h2>
+
+<p>下拉分页：</p>
+
+<p>页面中指定下来分页的地址，下拉分页的ID，下来分页的pageData和回调函数就可以了。代码大体如下：</p>
+
+<pre><code>var listObj={
+    pagenumber:2,
+    initList:function(){
+        commonObj.moreUrl = "";//设置下拉分页url
+        commonObj.appendId="";//设置下拉分页id
+        //下滑分页数据
+        commonObj.pageData={page:listObj.pagenumber,t:true};
+        //下滑分页回调函数
+        commonObj.searchCallBack=function(res){
+            console.log(res);
+            $(".loaddiv").hide();
+            var dataLength=res.data.length;
+            if(dataLength&gt;0){
+                listObj.pagenumber++;
+                commonObj.ajaxstatus=true;
+                commonObj.pageData.page=listObj.pagenumber;
+                var htmlArray=[];
+                for(var i=0;i&lt;dataLength;i++){
+                    htmlArray[i]='&lt;a class="shudongli"" href="'+res.data[i].sUrl+'"&gt;'+
+                '&lt;div class="sdliinner"&gt;'+
+                    '&lt;div class="leftimage"&gt;&lt;img src="'+res.data[i].sImageUrl+'" alt=""&gt;&lt;/div&gt;'+
+                    '&lt;div class="rightcontent"&gt;'+
+                       ' &lt;p class="toptitle"&gt;'+res.data[i].sTitle+'&lt;/p&gt;'+
+                        '&lt;p class="s_time"&gt;发布时间 '+res.data[i].iPublishTime+'&lt;/p&gt;'+
+                       '&lt;/div&gt;&lt;/div&gt;&lt;/a&gt;';
+
+                }
+                $("#"+commonObj.appendId).append(htmlArray.join(""));
+            }else{
+                commonObj.fenyestatus=false
+            }
+        }
+        //下滑分页触发
+        commonObj.scrollNextPage();
+
+    }
+}
+$(listObj.initList)
+</code></pre>
+
+<p>下来分页就可以了！</p>
+
+<h2>
+<a id="requirejs压缩合并代码" class="anchor" href="#requirejs%E5%8E%8B%E7%BC%A9%E5%90%88%E5%B9%B6%E4%BB%A3%E7%A0%81" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>requirejs压缩合并代码</h2>
+
+<p>假如项目中你的依赖比较多，可以用requirejs。</p>
+
+<p>关于reruirejs的压缩，可以看我之前的一篇博客文章：<a href="http://www.haorooms.com/post/requirejs_Optimizer_hbys">http://www.haorooms.com/post/requirejs_Optimizer_hbys</a></p>
+
+<p>具体是<a href="http://www.haorooms.com/post/requirejs_Optimizer_hbys">requirejs的Optimizer 对require项目的合并与压缩</a></p>
+
+<h2>
+<a id="canvas图片加载" class="anchor" href="#canvas%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>canvas图片加载</h2>
+
+<p>这个案例中，图片初始化加载是异步用canvas渲染的。</p>
+
+<p>关于canvas加载，我之前也写了一篇文章，感兴趣的可以去看一下<a href="http://www.haorooms.com/post/touchweb_canvas_lazyload">touchweb手机网站图片加载方法（canvas加载和延迟加载）</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/confidence68/mobile_touchload_mohuSearch">移动端列表开发功能大全</a> is maintained by <a href="https://github.com/confidence68">confidence68</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
