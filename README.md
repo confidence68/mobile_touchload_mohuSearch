@@ -5,6 +5,9 @@
 
 ## 搜索历史记录图片如下
 
+搜索历史运用了localStorage进行数据的临时存储，关于localStorage的一些用法，我之前的一篇文章中也写过！
+具体如下：[html5之Localstorage本地存储][3]
+
 ![搜索历史记录](https://raw.githubusercontent.com/confidence68/mobile_touchload_mohuSearch/master/images/history.jpg)
 
 
@@ -82,3 +85,4 @@
 
 [1]:http://www.haorooms.com/post/requirejs_Optimizer_hbys
 [2]:http://www.haorooms.com/post/touchweb_canvas_lazyload
+[3]:http://www.haorooms.com/post/html5_localstorage
