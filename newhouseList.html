@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>房价点评</title>
+         <link rel="stylesheet" type="text/css" href="css/basic.css"/>
+         <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+         <link rel="stylesheet" type="text/css" href="css/usercenter.css"/>
+    </head>
+        <body>
+            <!--新房列表开始-->
+            <div class="viewport">
+                <!--头部开始-->
+                <header class="UserCenter_head outborder">
+                    <div class="uc_return">
+                        <div class="uc_return_l">
+                            <a href="javascript:;"></a>
+                        </div>
+                        <div class="seach_wrap index_seach">
+                       		<s></s>
+                           <div class="search_txt"  id="searchShow">请输入楼盘名或地址</div>
+
+                        </div>
+                        <a href="#" class="map_search_icon"></a>
+                        <a href="javascript:;" class="confirm" id="searchBtn">确认</a>
+
+                    </div>
+                </header>
+                <!--头部开始-->
+                <nav class="newHosue_nav border_bottom">
+                    <ul class="pdwd">
+                        <li data-classes="region" id="region"><a href="#">区域</a><s class="down"></s></li>
+                        <li data-classes="price" id="price"><a href="#">价格</a><s class="down"></s></li>
+                        <li data-classes="family" id="family"><a href="#">户型</a><s class="down"></s></li>
+                    </ul>
+                </nav>
+                <!--选项切换开始-->
+                <section class="choice_wrap">
+                    <ul class="bgf choice_item region" data-flag="region">
+                        <li class="current"><a href="#" class="current">全部</a></li>
+                        <li><a href="#">宝山</a></li>
+                        <li><a href="#">长宁</a></li>
+                        <li><a href="#">崇明</a></li>
+                        <li><a href="#">奉贤</a></li>
+                        <li><a href="#">黄埔</a></li>
+                        <li><a href="#">宝山</a></li>
+                        <li><a href="#">长宁</a></li>
+                        <li><a href="#">崇明</a></li>
+                        <li><a href="#">奉贤</a></li>
+                        <li><a href="#">黄埔</a></li>
+                        <li><a href="#">宝山</a></li>
+                        <li><a href="#">长宁</a></li>
+                        <li><a href="#">崇明</a></li>
+                        <li><a href="#">奉贤</a></li>
+                        <li><a href="#">黄埔</a></li>
+                    </ul>
+                    <ul class="bgf choice_item price" data-flag="price">
+                        <li><a href="#">全部</a></li>
+                        <li><a href="#">2万以下</a></li>
+                        <li><a href="#">2万-3万</a></li>
+                        <li><a href="#">3万-5万</a></li>
+                        <li><a href="#">5万以上</a></li>
+                        <li><a href="#">待定</a></li>
+                    </ul>
+                    <ul class="bgf choice_item family" data-flag="family">
+                        <li><a href="#">全部</a></li>
+                        <li><a href="#">一房</a></li>
+                        <li><a href="#">两房</a></li>
+                        <li><a href="#">三房</a></li>
+                        <li><a href="#">四房</a></li>
+                        <li><a href="#">五房</a></li>
+                    </ul>
+                </section>
+                <!--选项切换结束-->
+                <!-- Swiper开始 -->
+                <section class="newHosue_swiper bgf border_bottom">
+                    <div class="swiper-container pr12"  id="newhouseswip">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide current">学区房</div>
+                            <div class="swiper-slide">刚需房</div>
+                            <div class="swiper-slide">性价比</div>
+                            <div class="swiper-slide">最佳户型</div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Swiper结束 -->
+                <!--新房列表项开始-->
+                <section class="newHosue_list bgf border_bottom" id="mainsection">
+                    <a href="javascript:;" class="item pl12">
+                        <div class="cnt p12 border_bottom">
+                            <div class="pic mr12">
+                                <canvas data-src="images/detail_big_img.jpg"></canvas>
+                                <s class="tuijian"></s>
+                            </div>
+                            <div class="wrap">
+                                <div class="house_name">
+                                    <span class="name">阳光城愉景湾</span>
+                                    <span class="grade ml5">4.14</span>
+                                </div>
+                                <div class="house_txt">浦东-川沙</div>
+                                <div class="house_txt house_txt1">
+                                    <span class="mr5">品牌开发商</span>
+                                    <span>户型紧凑实用</span>
+                                </div>
+                                <div class="house_txt house_txt2">
+                                    <span class="key_txt">12,000</span>
+                                    元/平
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="javascript:;" class="item pl12">
+                        <div class="cnt p12 border_bottom">
+                            <div class="pic mr12">
+                                <canvas data-src="images/detail_big_img.jpg"></canvas>
+                                <s class="jinshen"></s>
+                            </div>
+                            <div class="wrap">
+                                <div class="house_name">
+                                    <span class="name">阳光城愉景湾</span>
+                                    <span class="grade ml5">4.14</span>
+                                </div>
+                                <div class="house_txt">浦东-川沙</div>
+                                <div class="house_txt house_txt1">
+                                    <span class="mr5">品牌开发商</span>
+                                    <span>户型紧凑实用</span>
+                                </div>
+                                <div class="house_txt house_txt2">
+                                    <span class="key_txt">12,000</span>
+                                    元/平
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="javascript:;" class="item pl12">
+                        <div class="cnt p12 border_bottom">
+                            <div class="pic mr12">
+                                <canvas data-src="images/detail_big_img.jpg"></canvas>
+                                <s class="rushou"></s>
+                            </div>
+                            <div class="wrap">
+                                <div class="house_name">
+                                    <span class="name">阳光城愉景湾</span>
+                                    <span class="grade ml5">4.14</span>
+                                </div>
+                                <div class="house_txt">浦东-川沙</div>
+                                <div class="house_txt house_txt1">
+                                    <span class="mr5">品牌开发商</span>
+                                    <span>户型紧凑实用</span>
+                                </div>
+                                <div class="house_txt house_txt2">
+                                    <span class="key_txt">12,000</span>
+                                    元/平
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="javascript:;" class="item pl12">
+                        <div class="cnt p12 border_bottom">
+                            <div class="pic mr12">
+                                <canvas data-src="images/detail_big_img.jpg"></canvas>
+                                <s class="rushou"></s>
+                            </div>
+                            <div class="wrap">
+                                <div class="house_name">
+                                    <span class="name">阳光城愉景湾</span>
+                                    <span class="grade ml5">4.14</span>
+                                </div>
+                                <div class="house_txt">浦东-川沙</div>
+                                <div class="house_txt house_txt1">
+                                    <span class="mr5">品牌开发商</span>
+                                    <span>户型紧凑实用</span>
+                                </div>
+                                <div class="house_txt house_txt2">
+                                    <span class="key_txt">12,000</span>
+                                    元/平
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="javascript:;" class="item pl12">
+                        <div class="cnt p12 border_bottom">
+                            <div class="pic mr12">
+                                <canvas data-src="images/detail_big_img.jpg"></canvas>
+                                <s class="rushou"></s>
+                            </div>
+                            <div class="wrap">
+                                <div class="house_name">
+                                    <span class="name">阳光城愉景湾</span>
+                                    <span class="grade ml5">4.14</span>
+                                </div>
+                                <div class="house_txt">浦东-川沙</div>
+                                <div class="house_txt house_txt1">
+                                    <span class="mr5">品牌开发商</span>
+                                    <span>户型紧凑实用</span>
+                                </div>
+                                <div class="house_txt house_txt2">
+                                    <span class="key_txt">12,000</span>
+                                    元/平
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="javascript:;" class="item pl12">
+                        <div class="cnt p12 border_bottom">
+                            <div class="pic mr12">
+                                <canvas data-src="images/detail_big_img.jpg"></canvas>
+                                <s class="rushou"></s>
+                            </div>
+                            <div class="wrap">
+                                <div class="house_name">
+                                    <span class="name">阳光城愉景湾</span>
+                                    <span class="grade ml5">4.14</span>
+                                </div>
+                                <div class="house_txt">浦东-川沙</div>
+                                <div class="house_txt house_txt1">
+                                    <span class="mr5">品牌开发商</span>
+                                    <span>户型紧凑实用</span>
+                                </div>
+                                <div class="house_txt house_txt2">
+                                    <span class="key_txt">12,000</span>
+                                    元/平
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="javascript:;" class="item pl12">
+                        <div class="cnt p12">
+                            <div class="pic mr12">
+                                <canvas data-src="images/detail_big_img.jpg"></canvas>
+                                <s class="guanwang"></s>
+                            </div>
+                            <div class="wrap">
+                                <div class="house_name">
+                                    <span class="name">阳光城愉景湾</span>
+                                    <span class="grade ml5">4.14</span>
+                                </div>
+                                <div class="house_txt">浦东-川沙</div>
+                                <div class="house_txt house_txt1">
+                                    <span class="mr5">品牌开发商</span>
+                                    <span>户型紧凑实用</span>
+                                </div>
+                                <div class="house_txt house_txt2">
+                                    <span class="key_txt">12,000</span>
+                                    元/平
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </section>
+                <!--新房列表项结束-->
+                <!--返回顶部开始-->
+                <div class="return_top" id="backtop">
+                    <div class="return_top_bg"></div>
+                    <div class="return_top_txt">返回顶部</div>
+                </div>
+                <!--返回顶部结束-->
+                <!--无搜索内容开始-->
+                <section class="search_result index_search_result">
+                    <div class="search_result_tip">
+                        <div class="tip1">没找到您要的结果</div>
+                        <div class="tip2"><a href="#">换个条件</a>试试吧</div>
+                    </div>
+                </section>
+                <!--无搜索内容结束-->
+            </div>
+            <!--新房列表结束-->
+            <div id="BgDiv" class="black_bg" style="display:none ;"></div>
+            <!--新房列表结束-->
+            <input id="overnotload" value="1" type="hidden" />
+
+            <!--首页结束-->
+            <div class="Gsearch"  style="display: none;">
+                <div class="UserCenter_head outborder">
+                    <div class="uc_return">
+                        <div class="uc_return_l">
+                            <a href="javascript:void(0)" id="closeGsearch"></a>
+                        </div>
+                        <div class="seach_wrap index_seach white_bg">
+                            <s></s>
+                            <input type="search" class="search_txt"  value="" autocomplete="off" id="searchinput" placeholder="请输入楼盘名或地址">
+                        </div>
+                        <a href="javascript:;" class="confirm block"  data-content="confirmbtn"  id="newsearchBtn">确认</a>
+                    </div>
+                </div>
+                <div class="Gsearch_content">
+                    <ul id="his_content"></ul>
+                    <ul id="search_content" style="display:none;"></ul>
+                </div>
+            </div>
+
+      <script src="js/require.js" data-main="js/xfsearchconfig"></script>
+        </body>
+        </html>
+
