@@ -69,4 +69,7 @@
 
 关于reruirejs的压缩，可以看我之前的一篇博客文章：http://www.haorooms.com/post/requirejs_Optimizer_hbys
 
-具体是[requirejs的Optimizer 对require项目的合并与压缩]:http://www.haorooms.com/post/requirejs_Optimizer_hbys
+具体是[requirejs的Optimizer 对require项目的合并与压缩][1]
+
+
+[1]:http://www.haorooms.com/post/requirejs_Optimizer_hbys
