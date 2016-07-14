@@ -13,11 +13,17 @@
 
 ## 模糊搜索案例如下：
 
+搜索中，我运用了正则进行替换，关于正则表达式的一些用法，我博客中之前写过很多，大家可以看[这个地址][4]
+
 ![模糊搜索](https://raw.githubusercontent.com/confidence68/mobile_touchload_mohuSearch/master/images/mohusearch.jpg)
 
 ## 菜单切换的案例如下：
 
+在制作菜单切换中，我之前有文章也介绍过，感兴趣的可以看一下[手机网站表层div滑动，导致底层body滑动（touchmove的阻止）][5]
+
 ![菜单切换](https://raw.githubusercontent.com/confidence68/mobile_touchload_mohuSearch/master/images/menu.jpg)
+
+
 
 ## commonjs封装函数用法
 
@@ -86,3 +92,5 @@
 [1]:http://www.haorooms.com/post/requirejs_Optimizer_hbys
 [2]:http://www.haorooms.com/post/touchweb_canvas_lazyload
 [3]:http://www.haorooms.com/post/html5_localstorage
+[4]:http://www.haorooms.com/search?keyword=%E6%AD%A3%E5%88%99
+[5]:http://www.haorooms.com/post/webapp_bodyslidebcdiv
