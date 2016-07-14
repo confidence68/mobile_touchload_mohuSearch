@@ -63,3 +63,10 @@
 	
 下来分页就可以了！
 
+## requirejs压缩合并代码
+
+假如项目中你的依赖比较多，可以用requirejs。
+
+关于reruirejs的压缩，可以看我之前的一篇博客文章：http://www.haorooms.com/post/requirejs_Optimizer_hbys
+
+具体是[requirejs的Optimizer 对require项目的合并与压缩]:http://www.haorooms.com/post/requirejs_Optimizer_hbys
