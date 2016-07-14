@@ -72,4 +72,13 @@
 具体是[requirejs的Optimizer 对require项目的合并与压缩][1]
 
 
+
+## canvas图片加载
+
+这个案例中，图片初始化加载是异步用canvas渲染的。
+
+关于canvas加载，我之前也写了一篇文章，感兴趣的可以去看一下[touchweb手机网站图片加载方法（canvas加载和延迟加载）][2]
+
+
 [1]:http://www.haorooms.com/post/requirejs_Optimizer_hbys
+[2]:http://www.haorooms.com/post/touchweb_canvas_lazyload
