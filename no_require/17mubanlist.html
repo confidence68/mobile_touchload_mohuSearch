@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport"   content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes"  />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="苹果和梨" name="keywords" />
+    <meta content="苹果和梨" itemprop="description" name="description" />
+	<title>苹果和梨-模板列表</title>
+	<link rel="stylesheet" href="css/common.css" />
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8" ></script>
+	<script src="../js/common.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body>
+ <div class="jt_searchbar">
+  <div class="j_searchbg opensearchbar"><s class="s_searchicon"></s></div>
+  <div class="j_searchbtn">搜索</div>
+ </div>
+
+
+  <section class="x_topselect">
+    <div class="x_seehy bbtm">
+  		<div class="x_seetitle hy_color">婚姻必备手册</div>
+  		<div class="x_seecontent">看看大家都在关注什么婚姻问题</div>
+  	</div>
+  	<ul class="x_al p_pjal" id="caseList">
+  		<li>
+  		  <a href="#">
+  			<div class="x_leftf">我比他赚的少，离婚时却争取到了女儿</div>
+  			<div class="x_rightc"><s class="s_download"></s></div>
+  		  </a>
+  		</li>
+  		<li>
+  		  <a href="#">
+  			<div class="x_leftf">夫妻共同财产如何界定？</div>
+  			<div class="x_rightc"><s class="s_download"></s></div>
+  		  </a>
+  		</li>
+  		<li>
+  		  <a href="#">
+  			<div class="x_leftf">原来，我一直没有结婚。</div>
+  			<div class="x_rightc"><s class="s_download"></s></div>
+  		  </a>
+  		</li>
+     <li>
+        <a href="#">
+        <div class="x_leftf">我比他赚的少，离婚时却争取到了女儿</div>
+        <div class="x_rightc"><s class="s_download"></s></div>
+        </a>
+      </li>
+  	</ul>
+  	 <div class="loaddiv"></div>
+  </section>
+	
+<!-- 搜索弹框 -->
+<div class="searchdialog">
+  <div class="l_backbtn"></div>
+  <div class="jt_searchbar">
+    <div class="in_searchbg">
+      <s class="s_searchicon"></s>
+      <input type="search" name="" class="searchinputs" id="m_searchinput" />
+    </div>
+    <div class="j_searchbtn mh_searchbtn">搜索</div>
+ </div>
+ <div class="mh_searchlist">
+   <div class="m_searchli">
+     <div class="m_searchinner">我比他赚的少，<span>离婚</span>时却争取到了女儿</div>
+   </div>
+   <div class="m_searchli">
+     <div class="m_searchinner">我比他赚的少，<span>离婚</span>时却争取到了女儿</div>
+   </div>
+   <div class="m_searchli">
+     <div class="m_searchinner">我比他赚的少，<span>离婚</span>时却争取到了女儿时却争取到了女儿时却争取到了女儿</div>
+   </div> 
+ </div>
+</div>
+
+<script type="text/javascript">
+
+    var listObj={
+        pagenumber:2,
+        initList:function(){
+              commonObj.searchUrl="";//设置搜索地址
+              commonObj.ajaxUrl="";//设置模糊搜索地址
+              commonObj.mohuSearch();
+              commonObj.moreUrl = "";//设置下拉分页url
+              commonObj.appendId="caseList";
+              //下滑分页数据
+              commonObj.pageData={page:listObj.pagenumber,keyword:"",t:true};
+              //下滑分页回调函数
+              commonObj.searchCallBack=function(res){
+                  $(".loaddiv").hide();
+                    var dataLength=res.data.length;
+                    if(dataLength>0){
+                        listObj.pagenumber++;
+                       commonObj.ajaxstatus=true;
+                        commonObj.pageData.page=listObj.pagenumber;
+                        var htmlArray=[];
+                        for(var i=0;i<dataLength;i++){
+                            htmlArray[i]='<li> <a href="#">'+
+                            '<div class="x_leftf">我比他赚的少，离婚时却争取到了女儿</div>'+
+                            '<div class="x_rightc"><s class="s_download"></s></div>'+
+                            '</a></li>';
+                        }
+                        $("#"+commonObj.appendId).append(htmlArray.join(""));
+                    }else{
+                        commonObj.fenyestatus=false
+                    }
+              }
+              //下滑分页触发
+              commonObj.scrollNextPage();
+
+        }
+    }
+    $(listObj.initList)
+
+
+
+</script>
+
+</body>
+</html>
